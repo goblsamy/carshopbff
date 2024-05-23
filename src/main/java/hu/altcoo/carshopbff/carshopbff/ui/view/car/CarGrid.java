@@ -33,7 +33,6 @@ public class CarGrid extends PolymerTemplate<TemplateModel> {
         grid.addColumn(c -> c.getCarType().toString()).setHeader("Autó típusa").setWidth("150px").setFlexGrow(5).setSortable(true).setSortProperty("carType");
         grid.addColumn(c -> c.getCarName()).setHeader("Autó neve").setWidth("150px").setFlexGrow(5).setSortable(true).setSortProperty("carName");
 
-
         grid.setSelectionMode(Grid.SelectionMode.SINGLE);
         grid.setColumnReorderingAllowed(true);
         grid.getColumns().forEach(column -> column.setResizable(true));

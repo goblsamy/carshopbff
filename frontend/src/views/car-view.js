@@ -5,10 +5,10 @@ class CarView extends PolymerElement {
     static get template() {
         return html`
             <style include="shared-styles"></style>
-            <vaadin-horizontal-layout class="centered-content">
+            <div class="centered-content">
                 <car-grid id="carGrid"></car-grid>
                 <vaadin-button id="button">Refresh gec</vaadin-button>
-            </vaadin-horizontal-layout>
+            </div>
         `;
     }
 
