@@ -12,7 +12,6 @@ import java.util.List;
 @Data
 public class GarageDTO {
 
-    private long id;
     private Integer garageCapacity;
     private String garageName;
     private List<CarDTO> cars;

@@ -20,6 +20,7 @@ import hu.altcoo.carshopbff.carshopbff.ui.util.CarShopConst;
 import hu.altcoo.carshopbff.carshopbff.ui.view.Bye.ByeView;
 import hu.altcoo.carshopbff.carshopbff.ui.view.Hello.HelloView;
 import hu.altcoo.carshopbff.carshopbff.ui.view.car.CarView;
+import hu.altcoo.carshopbff.carshopbff.ui.view.garage.GarageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +51,9 @@ public class AppNavigation extends PolymerTemplate<TemplateModel> implements Aft
 
         menu.add(createTab(VaadinIcon.CAR, "Car", CarView.class));
         hrefs.add(CarShopConst.ROUTE_CAR);
+
+        menu.add(createTab(VaadinIcon.MEGAFONE, "Garage", GarageView.class));
+        hrefs.add(CarShopConst.ROUTE_GARAGE);
     }
 
     private Tab createTab(VaadinIcon icon, String title, Class<? extends Component> viewClass) {

@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Scope;
 import javax.annotation.PostConstruct;
 
 @Tag("garage-grid")
-//@JsModule("./src/views/garage-grid.js")
+@JsModule("./src/views/garage-grid.js")
 @SpringComponent
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class GarageGrid extends PolymerTemplate<TemplateModel> {
@@ -31,9 +31,10 @@ public class GarageGrid extends PolymerTemplate<TemplateModel> {
 
     @PostConstruct
     public void init() {
-        grid.addColumn(g -> g.getId()).setHeader("ID").setWidth("50px").setFlexGrow(5).setSortable(true).setSortProperty("id");
-        grid.addColumn(g -> g.getGarageName()).setHeader("Garázs neve").setWidth("150px").setFlexGrow(5).setSortable(true).setSortProperty("garageName");
+
+
         grid.addColumn(g -> g.getGarageCapacity()).setHeader("Garázs kapacitás").setWidth("50px").setFlexGrow(5).setSortable(true).setSortProperty("garageCapacity");
+        grid.addColumn(g -> g.getGarageName()).setHeader("Garázs neve").setWidth("150px").setFlexGrow(5).setSortable(true).setSortProperty("garageName");
         grid.addColumn(g -> g.getCars()).setHeader("Autók").setWidth("150px").setFlexGrow(5).setSortable(true).setSortProperty("cars");
 
         grid.setSelectionMode(Grid.SelectionMode.SINGLE);
