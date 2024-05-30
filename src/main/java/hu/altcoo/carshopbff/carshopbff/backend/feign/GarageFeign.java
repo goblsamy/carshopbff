@@ -5,6 +5,7 @@ import feign.RequestLine;
 import hu.altcoo.carshopbff.carshopbff.backend.config.ClientConfig;
 import hu.altcoo.carshopbff.carshopbff.backend.dto.GarageDTO;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -15,5 +16,5 @@ import java.util.Map;
 public interface GarageFeign {
 
     @RequestMapping(method = RequestMethod.GET, value = "/garage")
-    List<GarageDTO> findAll(@HeaderMap Map<String, Object> headerMap);
+    List<GarageDTO> findAll(@RequestHeader Map<String, Object> headerMap);
 }

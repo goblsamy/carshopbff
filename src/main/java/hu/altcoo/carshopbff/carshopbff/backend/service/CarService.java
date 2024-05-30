@@ -1,5 +1,6 @@
 package hu.altcoo.carshopbff.carshopbff.backend.service;
 
+import hu.altcoo.carshopbff.carshopbff.backend.dto.CarCreateCommandDTO;
 import hu.altcoo.carshopbff.carshopbff.backend.dto.CarDTO;
 import hu.altcoo.carshopbff.carshopbff.backend.feign.CarFeign;
 import hu.altcoo.carshopbff.carshopbff.backend.feign.FeignHeadersFactory;
@@ -19,6 +20,10 @@ public class CarService {
 
 
     public List<CarDTO> findAll() {
-        return feign.findAll((headersFactory.build()));
+        return feign.findAll(headersFactory.build());
+    }
+
+    public CarDTO create(CarCreateCommandDTO carCreateCommandDTO) {
+        return feign.create(headersFactory.build(), carCreateCommandDTO);
     }
 }
