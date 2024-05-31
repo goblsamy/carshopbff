@@ -53,7 +53,8 @@ public class CarView extends PolymerTemplate<TemplateModel> {
 
     private CarCreateCommandDTO dtoToEdit;
 
-    CarDataPanel dataPanel = new CarDataPanel();
+    @Autowired
+    private CarDataPanel dataPanel;
 
     @Id("dialog")
     private Dialog dialog;

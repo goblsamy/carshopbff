@@ -48,7 +48,9 @@ public class CarDataPanel extends PolymerTemplate<CarDataPanel.Model> {
         save.addClickListener(e -> listener.onSave());
 
         comboCarType.setItems(getCarTypeNames());
-        comboCarType.setItemLabelGenerator(e -> getCarTypeNames().toString());
+        comboCarType.setItemLabelGenerator(
+                e -> e
+        );
         comboCarType.setPreventInvalidInput(true);
     }
 
